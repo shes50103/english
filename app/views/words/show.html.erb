@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ebody:</strong>
+  <%= @word.ebody %>
+</p>
+
+<p>
+  <strong>Cbody:</strong>
+  <%= @word.cbody %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @word.status %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @word.level %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @word.user %>
+</p>
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>
