@@ -6,6 +6,9 @@ class Post < ApplicationRecord
   before_save :set_count
 
   def set_count
+    Rails.logger.info self
+    Rails.logger.info self.count
+
     self.count = content.body.to_plain_text.scan(/\w+/).size
   end
 end
