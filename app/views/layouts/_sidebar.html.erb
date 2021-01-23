@@ -1,0 +1,11 @@
+
+<div class="row">
+  <div class="col-3">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <%= link_to "Post", posts_path, class: 'nav-link' + nav_active('posts')%>
+      <%= link_to "Word", words_path, class: 'nav-link' + nav_active('words') %>
+    </div>
+  </div>
+</div>
+
+Post count <%= post_count %>

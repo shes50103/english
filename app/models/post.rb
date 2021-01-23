@@ -3,6 +3,11 @@
 class Post < ApplicationRecord
   belongs_to :user
   has_rich_text :content
+  before_save :set_count
+
+  def set_count
+    self.count = content.body.to_plain_text.scan(/\w+/).size
+  end
 end
 
 # == Schema Information
@@ -14,4 +19,5 @@ end
 #  user_id    :bigint           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  count      :integer
 #
